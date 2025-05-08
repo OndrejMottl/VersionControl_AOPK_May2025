@@ -1,8 +1,7 @@
 /*-- scss:defaults --*/
 
-@import url(./fonts/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
 
 // Vertical spacing between blocks of text
 $smallMargin: 5px;
@@ -10,45 +9,37 @@ $blockMargin: 10px;
 $largeMargin: 20px;
 
 // Colors
-$black: #000000ff;
-$gray: #808080ff;
-$byzantium: #8f286fff;
-$harvest-gold: #eca400ff;
-$persian-green: #1b998bff;
-$cerulean: #006992ff;
+$dartmouth-green: #1d6c4eff;
+$brunswick-green: #2f4435ff;
+$burnt-orange: #ad4f0eff;
+$orange-web: #faa916ff;
 $white: #ffffffff;
+$black: #000000ff;
 
-$color-primary: $black !default;
-$color-secondary: $white !default;
+$dartmouth-green-rgb: rgba(29, 108, 78, 1);
+$brunswick-green-rgb: rgba(47, 68, 53, 1);
+$burnt-orange-rgb: rgba(173, 79, 14, 1);
+$orange-web-rgb: rgba(250, 169, 22, 1);
+$white-rgb: rgba(255, 255, 255, 1);
+$black-rgb: rgba(0, 0, 0, 1);
 
-$color-high-primary: $byzantium !default;
-$color-high-secondary: $harvest-gold !default;
-$color-high-tertiary: $persian-green !default;
-
-$body-color: $color-primary !default;
-$link-color: $color-high-tertiary !default;
-$selection-bg: $color-high-tertiary !default;
-$code-color: $color-primary !default;
-
-// Background of the presentation
-$backgroundColor: $color-secondary !default;
+$body-color: $black;
+$backgroundColor: $white;
 
 // Typography
-$mainFont: "Lato", sans-serif !default;
+$mainFont: 'Open Sans', sans-serif;
 $mainFontSize: 30px;
 $body-line-height: 1.5;
 
 $headingMargin: 0;
-$headingFont: "League Gothic", sans-serif !default;
-$headingColor: $color-high-primary;
+$headingFont: 'Roboto', sans-serif;
 $headingLineHeight: 1.2;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
-$headingTextShadow: none;
-$headingFontWeight: normal;
+$headingFontWeight: bold;
+$headingColor: $dartmouth-green;
+$headingShadow: 3px 4px 5px $black !default;
 
 $heading1Size: 3.77em;
-$heading1TextShadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 $heading2Size: 2.11em;
 $heading3Size: 1.55em;
 $heading4Size: 1em;
@@ -64,95 +55,241 @@ body {
   font-size: $mainFontSize;
   line-height: $body-line-height;
   color: $body-color;
-  background-color: $backgroundColor;
+  background-color: $backgroundColor !important;
 }
 
 a {
-  color: $link-color;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  padding: $smallMargin;
+  border-radius: 5px;
+  background-color: $burnt-orange !important;
+  color: $white !important;
+  text-decoration: underline !important;
 
   &:hover {
-    color: darken($link-color, 10%);
-    text-decoration: underline;
+    color: $burnt-orange !important;
+    background-color: $white !important;
   }
 }
 
-.bold {
-  font-weight: bold;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.strike {
-  text-decoration: line-through;
-}
-
-.text-color-primary {
-  color: $color-primary;
-}
-
-.text-color-secondary {
-  color: $color-secondary;
-}
-
-.text-color-highlight-primary {
-  background-color: $color-high-primary;
-  color: $white;
-}
-
-.text-color-highlight-secondary {
-  background-color: $color-high-secondary;
-  color: $white;
-}
-
-.text-color-highlight-tertiary {
-  background-color: $color-high-tertiary;
-  color: $white;
-}
-
-.textcenter {
+/* Headings */
+h1 {
+  font-family: $headingFont;
+  font-size: $heading1Size;
+  line-height: $headingLineHeight;
+  letter-spacing: $headingLetterSpacing;
+  font-weight: $headingFontWeight;
+  margin: $headingMargin;
+  color: $headingColor;
+  text-shadow: 3px 4px 5px $black;
   text-align: center;
 }
 
-/* Headings */
-h1,
-.reveal h1 {
-  font-family: $headingFont;
-  font-size: $heading1Size;
-  color: $headingColor;
-  line-height: $headingLineHeight;
-  letter-spacing: $headingLetterSpacing;
-  text-transform: $headingTextTransform;
-  text-shadow: $heading1TextShadow;
-  font-weight: $headingFontWeight;
-  margin: $headingMargin;
-}
-
-h2,
-.reveal h2 {
+h2 {
   font-family: $headingFont;
   font-size: $heading2Size;
-  color: $headingColor;
   line-height: $headingLineHeight;
   letter-spacing: $headingLetterSpacing;
-  text-transform: $headingTextTransform;
   font-weight: $headingFontWeight;
   margin: $headingMargin;
+  color: $headingColor;
+  text-shadow: 3px 4px 5px $black;
+  text-align: center;
 }
 
+h3 {
+  font-family: $headingFont;
+  font-size: $heading3Size;
+  line-height: $headingLineHeight;
+  letter-spacing: $headingLetterSpacing;
+  font-weight: $headingFontWeight;
+  margin: $headingMargin;
+  text-shadow: none;
+  color: $body-color;
+}
+
+h4 {
+  font-family: $headingFont;
+  font-size: $heading4Size;
+  line-height: $headingLineHeight;
+  letter-spacing: $headingLetterSpacing;
+  font-weight: $headingFontWeight;
+  margin: $headingMargin;
+  text-shadow: none;
+  color: $body-color;
+}
+
+/* Code block */
+code {
+  $code-color: $brunswick-green !important;
+  background-color: darken($backgroundColor, 10%) !important;
+  padding: $smallMargin;
+  border-radius: 5px;
+  font-size: $mainFontSize / 2.5;
+  line-height: 1;
+}
+
+/* List styling */
+ul {
+  padding-left: 0;
+  margin-left: $blockMargin;
+}
+
+
+.text-color-dartmouth-green {
+  color: $dartmouth-green !important;
+}
+
+.text-color-burnt-orange {
+  color: $burnt-orange !important;
+}
+
+.text-color-black {
+  color: $black !important;
+}
+
+.text-color-orange-web {
+  color: $orange-web !important;
+}
+
+.text-color-brunswick-green {
+  color: $brunswick-green !important;
+}
+
+.text-color-white {
+  color: $white !important;
+}
+
+.text-background-dartmouth-green {
+  background-color: $dartmouth-green;
+  color: $white;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+
+.text-background-burnt-orange {
+  background-color: $burnt-orange;
+  color: $white;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+
+.text-background-black {
+  background-color: $black;
+  color: $white;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+
+.text-background-orange-web {
+  background-color: $orange-web;
+  color: $black;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+
+.text-background-brunswick-green {
+  background-color: $brunswick-green;
+  color: $white;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+
+.text-background-white {
+  background-color: $white;
+  color: $black;
+  padding: $smallMargin;
+  border-radius: 5px;
+}
+
+.text-color-darker {
+  filter: brightness(50%);
+}
+
+.text-color-brigher {
+  filter: brightness(250%);
+}
+
+.text-font-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-strike {
+  text-decoration: line-through;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-normal {
+  text-transform: none;
+}
+
+.text-font-body {
+  font-family: $mainFont;
+}
+
+.text-font-heading {
+  font-family: $headingFont;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-smaller {
+  font-size: $mainFontSize * 0.7;
+}
+
+.text-larger {
+  font-size: $mainFontSize * 1.3;
+}
 
 /* Slide content layout */
 .reveal .slides {
   max-width: $content-max-width;
   margin: auto;
   padding: 0 $smallMargin;
+}
+
+.center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /* Constrain figures and other large block elements */
@@ -169,51 +306,44 @@ h2,
 }
 
 /* Specialised sections */
-.reveal .title {
-  background-color: $headingColor;
-  color: $backgroundColor;
-  text-align: center;
+.reveal .bg-dartmouth-green {
+  background-color: $dartmouth-green;
 }
 
-.reveal .subtitle {
-  background-color: $color-high-secondary;
-  color: $backgroundColor;
-  text-align: center;
+.reveal .bg-black {
+  background-color: $black;
 }
 
-.reveal .inverse {
-  color: $color-secondary;
-  background-color: $color-primary;
+.reveal .bg-burnt-orange {
+  background-color: $burnt-orange;
+}
+
+.reveal .bg-orange-web {
+  background-color: $orange-web;
+}
+
+.reveal .bg-brunswick-green {
+  background-color: $brunswick-green;
+}
+
+.reveal .bg-white {
+  background-color: $white;
 }
 
 .reveal .exercise {
-  background-color: $color-high-tertiary;
-  color: $color-secondary;
+  background-color: $orange-web;
+  color: $black;
 }
 
 /* Blockquote */
 .reveal .blockquote {
-  font-style: italic;
-  border-left: 6px solid $color-high-primary;
   padding: $smallMargin;
   border-radius: 25px;
-  border-top: 3px solid $gray;
-  border-bottom: 3px solid $gray;
-  border-right: 3px solid $gray;
-  background-color: $color-secondary;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Code block */
-code {
-  background-color: darken($backgroundColor, 20%);
-  padding: $smallMargin;
-  border-radius: 5px;
-}
-
-/* List styling */
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: $blockMargin;
+  border-left: 6px solid $black;
+  border-top: 3px solid $black;
+  border-bottom: 3px solid $black;
+  border-right: 3px solid $black;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
