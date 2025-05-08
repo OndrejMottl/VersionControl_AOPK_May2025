@@ -6,7 +6,7 @@ format:
     preview-links: auto
     output-file: "index"
     output-ext: "html"
-    # logo: "Materials/About/personal_sticker.png"
+    logo: "Materials/About/personal_sticker.png"
     code-line-numbers: false
     code-overflow: wrap
     embed-resources: true
@@ -45,11 +45,11 @@ include_local_figure <- function(data_source) {
 }
 ```
 
-# [Presentation title]{.bold .r-fit-text} {.title}
+# [Presentation title]{.bold .r-fit-text}
 
 Ondřej Mottl
 
-# [References]{.bold .r-fit-text} {.title}
+# [References]{.bold .r-fit-text}
 
 :::: columns
 ::: {.column width="50%"}
