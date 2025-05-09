@@ -54,14 +54,25 @@ include_local_figure <- function(data_source) {
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="40%"}
 :::
 
-::: {.column width="40%"}
+::: {.column width="30%"}
 
 ```{r}
 #| label: github-logo-0
 include_local_figure("Logos/GH_logo.png")
+```
+
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+```{r}
+#| label: aopk-logo-0
+include_local_figure("Logos/logo-aopk-bile.png")
 ```
 
 :::
