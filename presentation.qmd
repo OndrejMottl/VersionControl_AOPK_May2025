@@ -394,6 +394,16 @@ Each "paper" is a single project.
 [This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
 :::
 
+## Project file structure
+
+```{r}
+#| label: file-management
+include_local_figure("Scriberia/file-management-manual-with-text.jpg")
+```
+
+::: {.footer}
+[This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807)
+:::
 
 ## Project structure - RStudio Projects
 
@@ -426,7 +436,7 @@ include_local_figure("Exercise/monkey_see_monkey_do_by_adiasarahma.jpg")
 ## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
 
 ::: {.r-fit-text}
-* Create a new RStudio project
+* Create a new (RStudio) project
 * Switch between projects
 :::
 
@@ -2047,19 +2057,273 @@ knitr::include_graphics("https://www.garrickadenbuie.com/blog/pull-request-flow-
 [Pull Request Flow with usethis](https://www.garrickadenbuie.com/blog/pull-request-flow-usethis)
 :::
 
+# [Task management]{.bold .r-fit-text .text-color-white} {.bg-dartmouth-green}
+
+## Issue (a task) on GitHub
+
+Original purpose of [GitHub Issues]{.text-background-dartmouth-green} is to track bugs & feature requests in software developmen projects🧑‍💻.
+
+However, We can highjack it for any kind of task management🦹.
+
+<br>
+
+:::: {.columns}
+
+:::{.column width="50%"}
+
+```{r}
+#| label: ResearchCycle
+include_local_figure("Scriberia/ResearchCycle.jpg")
+```
+:::
+
+:::{.column width="50%"}
+```{r}
+#| label: software-dev-life-cycle
+knitr::include_graphics("https://miro.medium.com/v2/resize:fit:4800/format:webp/1*GU-YWDqM-ZljYHGs1iDNPg.jpeg")
+
+```
+:::
+::::
+
+::: footer
+[This image was created by Scriberia for The Turing Way community and is used under a CC-BY licence](https://zenodo.org/doi/10.5281/zenodo.3332807) |
+[Software development life-cycle (SDLC)](https://medium.com/@artjoms/software-development-life-cycle-sdlc-6155dbfe3cbc)
+:::
+
+## Issue (a task) on GitHub
+
+```{r}
+#| label: issue-on-GH
+knitr::include_graphics("https://docs.github.com/assets/cb-66899/mw-1440/images/help/issues/issue-title-body.webp")
+```
+
+::: footer
+[GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+:::
+
+## Issues - space for communication
+
+```{r}
+#| label: issue-on-GH-comments
+knitr::include_graphics("https://rewind.com/wp-content/uploads/2021/03/G8oAt9b.png")
+```
+
+::: footer
+[Rewind](https://rewind.com/blog/best-practices-for-using-github-issues/)
+:::
+
+## Splitting tasks 
+
+:::: {.columns}
+
+:::{.column width="50%"}
+
+You can split tasks into [subtasks]{.text-background-dartmouth-green} and [checklists]{.text-background-brunswick-green}.
+
+This allow to track progress more granularly.
+
+:::
+
+:::{.column width="50%"}
+
+```{r}
+#| label: issue-on-GH-subtasks
+knitr::include_graphics("https://docs.github.com/assets/cb-127397/mw-1440/images/help/writing/task-list-rendered.webp")
+```
+
+:::
+
+::::
+
+::: footer
+[GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists)
+:::
+
+## Issues - Assign
+
+```{r}
+#| label: issue-on-GH-assign
+knitr::include_graphics("https://docs.github.com/assets/cb-119861/mw-1440/images/help/issues/issue-assignees.webp")
+```
+
+::: footer
+[GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+:::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
+
+:::{.r-fit-text}
+1. Create an 3 issus on your repo
+2. Comment on the issues
+3. Create a higher-level task with subtasks (checklist)
+4. Assign the tasks to someone 
+:::
+
+`r countdown(minutes = 15)`
+
+## Labels
+
+You can use [labels]{.text-background-dartmouth-green} to categorize tasks.
+
+```{r}
+#| label: issue-on-GH-labels
+knitr::include_graphics("https://docs.github.com/assets/cb-120194/mw-1440/images/help/issues/issue-with-label.webp")
+```
+
+::: footer
+[GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+:::
+
+## Labels
+
+::::{.columns}
+
+:::{.column width="35%"}
+Be crateative! You can create your own **labels** based on:
+
+* [priority]{.text-background-dartmouth-green}
+* [type]{.text-background-brunswick-green}
+* [status]{.text-background-orange-web}
+* ...
+:::
+
+:::{.column width="64%" .fragment}
+```{r}
+#| label: issue-on-GH-labels2
+include_local_figure("Github/gh_labels.png")
+```
+:::
+::::
+
+::: footer
+[GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+:::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
+
+:::{.r-fit-text}
+1. Create 3 new labels in your repo
+2. Assign the labels to the issues 
+:::
+
+`r countdown(minutes = 5)`
+
+## Tracking progress - link PRs
+
+[Issues]{.text-background-dartmouth-green} can be linked to [Pull Requests]{.text-background-brunswick-green}.
+
+Link specific work with specific changes.
+
+```{r}
+#| label: issue-on-GH-PR
+knitr::include_graphics("https://github.blog/wp-content/uploads/2020/02/issue-pull-request-link.png")
+```
+
+::: footer
+[GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
+:::
+
+## Tracking progress - link PRs
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+When a PR is merged, the issue is closed automatically.
+
+Use the word `close` or `fix` in the PR description to link it to the issue.
+
+:::
+
+::: {.column width="50%" }
+```{r}
+#| label: Link-PR
+include_local_figure("Github/issue_closed_by_PR_1.png")
+```
+
+::: {.fragment}
+The issue is closed by the PR
+```{r}
+#| label: Link-PR2
+include_local_figure("Github/issue_closed_by_PR_2.png")
+```
+:::
+
+:::
+::::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
+
+:::{.r-fit-text}
+1. Create a new PR in your repo
+2. Link it to one of the issues
+3. Merge the PR
+4. Check if the issue is closed
+:::
+
+`r countdown(minutes = 20)`
+
+# [Outro]{.bold .r-fit-text .text-color-white} {.bg-dartmouth-green}
+
+## GitHub tools suite
+
+:::: {.columns}
+
+::: {.column width="20%"}
+```{r}
+#| label: gh_logo3
+include_local_figure("Logos/GH_logo.png")
+```
+:::
+
+::: {.column width="80%"}
+```{r}
+#| label: project-management-tools-gh
+include_local_figure("Github/GH_management.png")
+```
+:::
+
+::::
+
+::: footer
+[wiki](https://commons.wikimedia.org/wiki/File:Github-desktop-logo-symbol.svg) | [Getting started with project planning on GitHub](https://github.blog/developer-skills/github/getting-started-with-project-planning-on-github/)
+:::
+
 ## This is just a teaser
+
+:::: {.columns}
+
+::: {.column width="45%" .fragment}
 
 GitHub has a lot of [features]{.text-background-dartmouth-green} and [tools]{.text-background-brunswick-green} to make your life easier:
 
 * Project management
-* Task management
 * Collaboration
 * Dissimination
 * Automation
 * ...
 
+:::
+
+::: {.column width="55%" .fragment}
+
+In addition, I have [additional materials]{.text-background-orange-web} on:
+
+* Clean code
+* Reproducibile analysis
+* Large-scale quantitative analysis
+* Functional programming
+* Project management & collaboration
+* Literate programming (QUARTO)
+* ...
+
+:::
+
+::::
+
 ::: {.fragment}
-After a break?
+Maybe next time?
 :::
 
 ## {.bg-dartmouth-green}
