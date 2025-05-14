@@ -448,7 +448,7 @@ include_local_figure("Exercise/monkey_see_monkey_do_by_adiasarahma.jpg")
 
 ::: {.column width="45%"}
 
-### Git {.textcenter}
+### Git {.text-center}
 
 * local software
 * keep track of changes of files 
@@ -469,7 +469,7 @@ include_local_figure("Logos/Git_icon.svg.png")
 
 ::: {.column width="45%" }
 
-### GitHub {.textcenter}
+### GitHub {.text-center}
 
 * host server
 * store (git) the data
@@ -1152,7 +1152,7 @@ git push
 
 :::::
 
-## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
 
 ::: {.r-fit-text}
 1. Publish repo to GitHub
@@ -1335,10 +1335,45 @@ include_local_figure("GitHub/07_final_click.png")
 [biostats: Version control with GitHub and RStudio](https://biostats-r.github.io/biostats/github/1_Git_Tutorial.html)
 :::
 
-## [Practical Exercise]{.r-fit-text} {.exercise .textcenter}
+## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
 
 ::: {.r-fit-text}
-Create a new repo on GitHub
+1. Create a new repo on GitHub
+2. Delete a repo on GitHub
+:::
+
+`r countdown(minutes = 5)`
+
+## Sharing your repo
+
+Github allows you to specify [roles]{.text-background-dartmouth-green} and [permissions]{.text-background-brunswick-green} of your repo.
+
+```{r}
+#| label: GH-team-admin-roles
+include_local_figure("Github/GH_team_admin.png")
+```
+
+::: footer
+[GitHub Docs](https://github.com/features/#features-team-administration)
+:::
+
+## Roles (permissions)
+
+```{r}
+#| label: GH-team-admin-roles3
+knitr::include_graphics("https://cdn.prod.website-files.com/65cb70dea86ef31d62e7ad25/65dc9790deb55bea60f20179_630d23aa00443e4276226ebd_pre-defined_roles_f859b878b8d94a5a98737bd2c66493e2_1000.png")
+```
+
+::: footer
+[GitHub Advanced Security - Secret Scanning](https://www.liatrio.com/resources/blog/github-advanced-security-secret-scanning)
+:::
+
+## [Practical Exercise]{.r-fit-text} {.exercise .text-center}
+
+:::{.r-fit-text}
+1. Add someone as a collaborator to your repo
+2. Change the role of the collaborator
+3. Remove the collaborator
 :::
 
 `r countdown(minutes = 5)`
