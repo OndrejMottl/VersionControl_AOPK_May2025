@@ -1601,6 +1601,16 @@ Copy the **SHA** of the last commit
 git reset --hard <SHA>
 ```
 
+Need to push the changes to the remote repo:
+
+```{bash}
+#| label: git-reset-commit-rstudio2
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git push --force
+```
+
 ### VS Code
 
 In the [Source control]{.text-background-brunswick-green} panel -> **COMMITS** section -> Right-click on the commit you want to revert to -> Select the [Reset Current Branch to Previous Commit]{.text-background-orange-web}
@@ -1643,6 +1653,16 @@ Copy the **SHA** of the last commit
 #| eval: false
 #| code-line-numbers: false
 git reset --hard <SHA>
+```
+
+Need to push the changes to the remote repo:
+
+```{bash}
+#| label: git-reset-commit-cl2
+#| echo: true
+#| eval: false
+#| code-line-numbers: false
+git push --force
 ```
 
 :::::
